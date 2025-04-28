@@ -1,1 +1,26 @@
 @import 'tailwindcss';
+
+@plugin 'tailwindcss-motion';
+
+@plugin 'daisyui';
+
+@plugin 'daisyui/theme' {
+    name: "danila";
+    default: true;
+
+    --color-primary: #FF5924;
+    --color-accent: #2457FF;
+    --color-neutral: #FFFFFF;
+    --color-base-100: #EAEAEA;
+    --color-base-200: #DEDEDE;
+    --color-base-content: #292929;
+}
+
+@theme {
+    --font-family-sans: "Space Grotesk", sans-serif;
+}
+
+html,
+body {
+    font-family: "Space Grotesk";
+}
