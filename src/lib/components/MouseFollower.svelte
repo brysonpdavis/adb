@@ -15,6 +15,7 @@
 	}: {
 		color?: 'primary' | 'alt';
 		size: 'big' | 'small';
+		/** bigger number == slower follow */
 		factor: number;
 		offset?: Position;
 	} = $props();
@@ -44,7 +45,7 @@
 
 <div
 	style="top: {followerPosition.y + offset.y}px; left: {followerPosition.x + offset.x}px;"
-	class={cn('pointer-events-none absolute z-0 rounded-full blur-3xl', {
+	class={cn('pointer-events-none absolute rounded-full blur-3xl', {
 		'bg-primary opacity-20': color === 'primary',
 		'from-accent to-neutral bg-linear-to-b': color === 'alt',
 		'h-100 w-100': size === 'big',

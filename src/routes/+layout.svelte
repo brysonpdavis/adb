@@ -7,11 +7,20 @@
 	let { children } = $props();
 </script>
 
-<div class="bg-base-100 z-10 flex h-screen flex-col items-center justify-start">
-	<Nav />
-	{@render children()}
+<div class="pointer-events-none fixed z-0 h-screen w-screen overflow-hidden">
+	<MouseFollower color="primary" factor={80} size="big" offset={{ x: -400, y: -200 }} />
+	<MouseFollower color="alt" factor={20} size="small" offset={{ x: 100, y: 130 }} />
 </div>
 
-<NameRound />
-<MouseFollower color="primary" factor={40} size="big" offset={{ x: -400, y: -200 }} />
-<MouseFollower color="alt" factor={20} size="small" offset={{ x: 100, y: 130 }} />
+<main class="relative z-5 flex h-screen flex-col items-center justify-start">
+	<content class="mx-auto flex min-h-screen w-full max-w-[924px] flex-col px-4 text-left">
+		{@render children()}
+	</content>
+</main>
+
+<div
+	class="pointer-events-none fixed top-0 z-10 flex h-screen w-screen flex-col items-center overflow-hidden"
+>
+	<Nav />
+	<NameRound />
+</div>
