@@ -5,22 +5,24 @@
 @plugin 'daisyui';
 
 @plugin 'daisyui/theme' {
-    name: "danila";
-    default: true;
+	name: 'danila';
+	default: true;
 
-    --color-primary: #FF5924;
-    --color-accent: #2457FF;
-    --color-neutral: #FFFFFF;
-    --color-base-100: #EAEAEA;
-    --color-base-200: #DEDEDE;
-    --color-base-content: #292929;
+	--color-primary: #ff5924;
+	--color-accent: #2457ff;
+	--color-neutral: #ffffff;
+	--color-base-100: #eaeaea;
+	--color-base-200: #dedede;
+	--color-base-content: #292929;
 }
 
 @theme {
-    --font-family-sans: "Space Grotesk", sans-serif;
+	--font-family-sans: 'Space Grotesk', sans-serif;
+	--screen-no-footer: calc(100vh - 80px);
 }
 
 html,
 body {
-    font-family: "Space Grotesk";
+	font-family: 'Space Grotesk';
+	scroll-behavior: smooth;
 }

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
 	import FunButton from './fun-button.svelte';
 
 	interface Props {
@@ -7,9 +6,10 @@
 		href: string;
 		thumbnailSrc: string;
 		logoSrc: string;
+		disabled?: boolean;
 	}
 
-	const { description, href, thumbnailSrc, logoSrc }: Props = $props();
+	const { description, href, thumbnailSrc, logoSrc, disabled = false }: Props = $props();
 </script>
 
 <div
@@ -20,7 +20,7 @@
 			<img class="h-6" src={logoSrc} alt="logo" />
 		</div>
 		<div class="text-2xl">{description}</div>
-		<FunButton alt="ok" text="see case study" {href} />
+		<FunButton text={disabled ? 'coming soon' : 'see case study'} {href} {disabled} />
 	</div>
 	<div class="flex h-full min-h-72 max-w-144 flex-row items-center">
 		<img src={thumbnailSrc} alt="thumbnail" />

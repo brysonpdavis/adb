@@ -1,23 +1,39 @@
 <script lang="ts">
-	import upRightArrow from '$lib/assets/arrow-up-right.svg';
 	import ArrowUpRightSvg from '$lib/components/svgs/ArrowUpRightSvg.svelte';
+	import { cn } from '$lib/utils';
+
 	interface Props {
 		text: string;
 		href: string;
-		alt: string;
+		disabled?: boolean;
+		newTab?: boolean;
 	}
-	let { text, href, alt }: Props = $props();
+	let { text, href, newTab = false, disabled = false }: Props = $props();
 </script>
 
-<a class="group w-fit" {href}>
+<a class="group w-fit" {href} target={newTab ? '_blank' : undefined}>
 	<button
-		class="shadow-base-300 bg-neutral hover:bg-base-300 flex cursor-pointer flex-row gap-4 rounded-full px-8 py-4 shadow-[4px_6px_0_0] outline-1 transition"
+		class={cn(
+			'shadow-base-300 flex flex-row gap-4 rounded-full px-8 py-4 shadow-[4px_6px_0_0] outline-1 transition',
+			{
+				'hover:bg-base-300 bg-neutral cursor-pointer': !disabled,
+				'bg-base-100 cursor-not-allowed': disabled
+			}
+		)}
+		{disabled}
 	>
-		<div class="group-hover:text-neutral text-base font-medium uppercase transition duration-300">
+		<div
+			class={cn('font-medium whitespace-nowrap uppercase transition duration-300', {
+				'group-hover:text-neutral text-base': !disabled,
+				'text-base-300': disabled
+			})}
+		>
 			{text}
 		</div>
 		<ArrowUpRightSvg
-			className="group-hover:stroke-neutral h-6 w-6 transition duration-300 ease-out group-hover:rotate-45"
+			className={cn('h-6 w-6 transition duration-300 ease-out', {
+				'group-hover:stroke-neutral group-hover:rotate-45': !disabled
+			})}
 		/>
 	</button>
 </a>

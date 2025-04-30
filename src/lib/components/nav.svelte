@@ -6,7 +6,7 @@
 
 {#snippet navSection(section: SiteSection)}
 	{@const isActive = page.route?.id?.includes(section.slug)}
-	<a href="/#slug" class={'group flex flex-row items-center gap-2'}>
+	<a href={`/${section.slug}`} class={'group flex flex-row items-center gap-2'}>
 		{#if isActive}
 			<div>
 				<div class="bg-primary h-2.5 w-2.5 rounded-full"></div>
