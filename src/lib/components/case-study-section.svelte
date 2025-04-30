@@ -13,7 +13,7 @@
 </script>
 
 <div
-	class="border-base-200 bg-neutral text-base-300 flex h-fit min-h-72 w-full shrink-0 flex-row justify-between gap-4 rounded-3xl border-2 px-12 py-4"
+	class="border-base-200 bg-neutral text-base-300 flex h-fit min-h-72 w-full shrink-0 flex-col justify-between gap-4 rounded-3xl border-2 px-12 py-4 lg:flex-row"
 >
 	<div class="flex flex-col gap-4 pt-18">
 		<div class="w-fit">
