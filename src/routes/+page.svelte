@@ -10,7 +10,7 @@
 </script>
 
 <div class="flex w-full max-w-[924px] flex-col gap-4 text-pretty" id="about">
-	<div class="m-0 h-80 shrink-0 p-0"></div>
+	<div class="m-0 h-36 shrink-0 p-0 lg:h-80"></div>
 	<img src={annaLaptop} class="h-24 w-24 rounded-full" alt="annadavisbandi" />
 	<div class="text-2xl font-medium uppercase">hi i'm anna</div>
 	<div class="text-4xl leading-14 font-medium uppercase">
@@ -27,7 +27,7 @@
 			spec.ai <img src={specLogo} alt="spec logo" class="h-6 w-6" /></a
 		>
 	</div>
-	<div class="mt-2 flex w-full flex-row gap-8">
+	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">
 		<FunButton text="explore my work" href="/yes" />
 		<FunButton text="my cv" href="/yes" />
 	</div>
@@ -71,7 +71,7 @@
 		I'm currently open to new opportunities and collaborations! If you're hiring, working on
 		something exciting, or just want to chat about design—I'd love to hear from you.
 	</div>
-	<div class="mt-2 flex w-full flex-row gap-8">
+	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">
 		<FunButton text="my cv" href="/yes" newTab />
 		<FunButton text="email" href={`mailto:${ANNA_EMAIL}`} />
 		<FunButton text="linkedin" href={ANNA_LINKEDIN} newTab />
