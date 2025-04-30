@@ -12,7 +12,7 @@
 <div class="flex w-full max-w-[924px] flex-col gap-4 text-pretty" id="about">
 	<div class="m-0 h-36 shrink-0 p-0 lg:h-80"></div>
 	<img src={annaLaptop} class="h-24 w-24 rounded-full" alt="annadavisbandi" />
-	<div class="text-2xl font-medium uppercase">hi i'm anna</div>
+	<div class="text-2xl font-normal uppercase">hi i'm anna</div>
 	<div class="text-4xl leading-14 font-medium uppercase">
 		product designer & founder with 6+ years of experience. based in
 		<span class="line-through"> toronto, on</span>
