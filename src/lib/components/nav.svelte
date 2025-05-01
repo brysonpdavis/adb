@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import { SITE_SECTIONS, type SiteSection } from '$lib/constants';
 	import { cn } from '$lib/utils';
+	import { activeSection } from '$lib/state/active-section.svelte';
 </script>
 
 {#snippet navSection(section: SiteSection)}
-	{@const isActive = page.route?.id?.includes(section.slug)}
-	<a href={`/${section.slug}`} class={'group flex flex-row items-center gap-2'}>
+	{@const isActive = activeSection() === section.name}
+	<a href={`/#${section.id}`} class={'group flex flex-row items-center gap-2'}>
 		{#if isActive}
 			<div>
 				<div class="bg-primary h-2.5 w-2.5 rounded-full"></div>

@@ -19,7 +19,7 @@
 		<div class="w-fit">
 			<img class="h-6" src={logoSrc} alt="logo" />
 		</div>
-		<div class="text-2xl">{description}</div>
+		<div class="text-2xl text-pretty">{description}</div>
 		<FunButton text={disabled ? 'coming soon' : 'see case study'} {href} {disabled} />
 	</div>
 	<div class="flex h-full min-h-72 max-w-144 flex-row items-center">
