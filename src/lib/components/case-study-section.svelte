@@ -1,15 +1,18 @@
 <script lang="ts">
+	import type { SerializableHashableImage } from '$lib/images';
 	import FunButton from './fun-button.svelte';
+	import HashImage from './hash-image.svelte';
 
 	interface Props {
 		description: string;
 		href: string;
-		thumbnailSrc: string;
+		logoHref: string;
+		thumbnailSrc: SerializableHashableImage;
 		logoSrc: string;
 		disabled?: boolean;
 	}
 
-	const { description, href, thumbnailSrc, logoSrc, disabled = false }: Props = $props();
+	const { description, href, logoHref, thumbnailSrc, logoSrc, disabled = false }: Props = $props();
 </script>
 
 <div
@@ -17,12 +20,12 @@
 >
 	<div class="flex flex-col gap-4 pt-18">
 		<div class="w-fit">
-			<img class="h-6" src={logoSrc} alt="logo" />
+			<a href={logoHref}> <img class="h-6" src={logoSrc} alt="logo" /></a>
 		</div>
 		<div class="text-2xl text-pretty">{description}</div>
 		<FunButton text={disabled ? 'coming soon' : 'see case study'} {href} {disabled} />
 	</div>
 	<div class="flex h-full min-h-72 max-w-144 flex-row items-center">
-		<img src={thumbnailSrc} alt="thumbnail" />
+		<HashImage image={thumbnailSrc} className="w-full lg:w-124" />
 	</div>
 </div>

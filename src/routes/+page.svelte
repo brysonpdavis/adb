@@ -1,6 +1,4 @@
 <script lang="ts">
-	import annaLaptop from '$lib/assets/anna-laptop.png';
-	import specThumbnail from '$lib/assets/spec-thumbnail.png';
 	import specLogo from '$lib/assets/spec-logo.svg';
 	import specWordmarkLogo from '$lib/assets/spec-wordmark-logo.svg';
 	import ingageWordmarkLogo from '$lib/assets/ingage-wordmark-logo.svg';
@@ -11,13 +9,21 @@
 	import NameRound from '$lib/components/name-round.svelte';
 	import { ANNA_EMAIL, ANNA_LINKEDIN } from '$lib/constants';
 	import { mountPageObserver } from '$lib/state/active-section.svelte';
+	import Nav from '$lib/components/nav.svelte';
+	import HashImage from '$lib/components/hash-image.svelte';
+	import type { PageProps } from './$types';
+
+	const { data }: PageProps = $props();
+	const { annaLaptop, specThumbnail } = data;
 
 	mountPageObserver();
 </script>
 
 <div class="flex w-full max-w-[924px] flex-col gap-4 text-pretty" id="about">
 	<div class="m-0 h-36 shrink-0 p-0 lg:h-80"></div>
-	<img src={annaLaptop} class="h-24 w-24 rounded-full" alt="annadavisbandi" />
+	<div class="h-24 w-24 overflow-hidden rounded-full">
+		<HashImage image={annaLaptop} className="h-24 w-24" />
+	</div>
 	<div class="text-2xl font-normal uppercase">hi i'm anna</div>
 	<div class="text-4xl leading-14 font-medium uppercase">
 		product designer & founder with 6+ years of experience. based in
@@ -45,27 +51,31 @@
 	<div class="m-0 h-36 shrink-0 p-0"></div>
 	<CaseStudySection
 		description="Bridging the gap in design and feedback"
-		href="https://specai.io"
+		logoHref="https://specai.io"
+		href="/case/specai"
 		thumbnailSrc={specThumbnail}
 		logoSrc={specWordmarkLogo}
 	/>
 	<CaseStudySection
 		description="Taking a LinkedIn engagement tool from 0 → 1"
-		href="https://specai.io"
+		logoHref="https://specai.io"
+		href="/case/specai"
 		thumbnailSrc={specThumbnail}
 		logoSrc={ingageWordmarkLogo}
 		disabled
 	/>
 	<CaseStudySection
 		description="Introducing a new product line to an existing brand"
-		href="https://specai.io"
+		logoHref="https://specai.io"
+		href="/case/specai"
 		thumbnailSrc={specThumbnail}
 		logoSrc={policymeWordmarkLogo}
 		disabled
 	/>
 	<CaseStudySection
 		description="Sprowt xx"
-		href="https://specai.io"
+		logoHref="https://specai.io"
+		href="/case/specai"
 		thumbnailSrc={specThumbnail}
 		logoSrc={sprowtWordmarkLogo}
 		disabled
@@ -83,4 +93,11 @@
 		<FunButton text="email" href={`mailto:${ANNA_EMAIL}`} />
 		<FunButton text="linkedin" href={ANNA_LINKEDIN} newTab />
 	</div>
+</div>
+
+<!-- in front of main content -->
+<div
+	class="pointer-events-none fixed top-0 z-10 flex h-screen w-screen flex-col items-center overflow-hidden"
+>
+	<Nav />
 </div>

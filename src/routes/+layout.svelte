@@ -20,10 +20,3 @@
 	</content>
 </main>
 <Footer />
-
-<!-- in front of main content -->
-<div
-	class="pointer-events-none fixed top-0 z-10 flex h-screen w-screen flex-col items-center overflow-hidden"
->
-	<Nav />
-</div>

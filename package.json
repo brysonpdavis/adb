@@ -40,8 +40,12 @@
 		]
 	},
 	"dependencies": {
+		"@types/node": "^22.15.3",
+		"blurhash": "^2.0.5",
 		"classnames": "^2.5.1",
 		"daisyui": "^5.0.28",
-		"tailwindcss-motion": "^1.1.0"
+		"sharp": "^0.34.1",
+		"tailwindcss-motion": "^1.1.0",
+		"thumbhash": "^0.1.1"
 	}
 }
