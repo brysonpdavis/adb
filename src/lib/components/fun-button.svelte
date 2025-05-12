@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ArrowUpRightSvg from '$lib/components/svgs/ArrowUpRightSvg.svelte';
+	import ArrowUpRightSvg from '$lib/components/svgs/arrow-up-right-svg.svelte';
 	import { cn } from '$lib/utils';
 
 	interface Props {

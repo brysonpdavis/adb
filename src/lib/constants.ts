@@ -22,3 +22,12 @@ export const BRYSON_LINKEDIN = 'https://www.linkedin.com/in/bryson-davis-7685521
 export const ANNA_LINKEDIN = 'https://www.linkedin.com/in/annabandi/';
 
 export const ANNA_EMAIL = 'annadanilabandi@gmail.com';
+
+export const SPEC_URL = 'https://www.specai.io/';
+
+export const INGAGE_URL = 'https://ingagenow.co/';
+
+export const POLICYME_URL = 'https://www.policyme.com/';
+
+export const SPEC_PLUGIN_URL =
+	'https://www.figma.com/community/plugin/1431766216793635236/specai-enhance-ui-ux-accessibility-copy-with-ai';

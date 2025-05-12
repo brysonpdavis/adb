@@ -7,17 +7,25 @@
 	import CaseStudySection from '$lib/components/case-study-section.svelte';
 	import FunButton from '$lib/components/fun-button.svelte';
 	import NameRound from '$lib/components/name-round.svelte';
-	import { ANNA_EMAIL, ANNA_LINKEDIN } from '$lib/constants';
+	import { INGAGE_URL, POLICYME_URL, SPEC_URL } from '$lib/constants';
 	import { mountPageObserver } from '$lib/state/active-section.svelte';
 	import Nav from '$lib/components/nav.svelte';
 	import HashImage from '$lib/components/hash-image.svelte';
 	import type { PageProps } from './$types';
+	import MouseFollower from '$lib/components/mouse-follower.svelte';
+	import LetsConnect from '$lib/components/lets-connect.svelte';
 
 	const { data }: PageProps = $props();
 	const { annaLaptop, specThumbnail } = data;
 
 	mountPageObserver();
 </script>
+
+<!-- behind main content -->
+<div class="pointer-events-none fixed -z-5 h-screen w-screen overflow-hidden">
+	<MouseFollower color="primary" factor={80} size="big" offset={{ x: -400, y: -200 }} />
+	<MouseFollower color="alt" factor={20} size="small" offset={{ x: 100, y: 130 }} />
+</div>
 
 <div class="flex w-full max-w-[924px] flex-col gap-4 text-pretty" id="about">
 	<div class="m-0 h-36 shrink-0 p-0 lg:h-80"></div>
@@ -51,26 +59,24 @@
 	<div class="m-0 h-36 shrink-0 p-0"></div>
 	<CaseStudySection
 		description="Bridging the gap in design and feedback"
-		logoHref="https://specai.io"
+		logoHref={SPEC_URL}
 		href="/case/specai"
 		thumbnailSrc={specThumbnail}
 		logoSrc={specWordmarkLogo}
 	/>
 	<CaseStudySection
 		description="Taking a LinkedIn engagement tool from 0 → 1"
-		logoHref="https://specai.io"
-		href="/case/specai"
+		logoHref={INGAGE_URL}
+		href="/case/ingage"
 		thumbnailSrc={specThumbnail}
 		logoSrc={ingageWordmarkLogo}
-		disabled
 	/>
 	<CaseStudySection
 		description="Introducing a new product line to an existing brand"
-		logoHref="https://specai.io"
-		href="/case/specai"
+		logoHref={POLICYME_URL}
+		href="/case/policyme"
 		thumbnailSrc={specThumbnail}
 		logoSrc={policymeWordmarkLogo}
-		disabled
 	/>
 	<CaseStudySection
 		description="Sprowt xx"
@@ -81,19 +87,7 @@
 		disabled
 	/>
 </div>
-<div id="contact" class="flex min-h-(--screen-no-footer) w-full flex-col gap-10">
-	<div class="m-0 h-36 shrink-0 p-0"></div>
-	<div class="text-5xl font-medium uppercase">let's connect!</div>
-	<div class="text-2xl uppercase">
-		I'm currently open to new opportunities and collaborations! If you're hiring, working on
-		something exciting, or just want to chat about design—I'd love to hear from you.
-	</div>
-	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">
-		<FunButton text="my cv" href="/yes" newTab />
-		<FunButton text="email" href={`mailto:${ANNA_EMAIL}`} />
-		<FunButton text="linkedin" href={ANNA_LINKEDIN} newTab />
-	</div>
-</div>
+<LetsConnect />
 
 <!-- in front of main content -->
 <div
