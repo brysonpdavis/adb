@@ -9,7 +9,6 @@
 	import LetsConnect from '$lib/components/lets-connect.svelte';
 	import AsteriskSvg from '$lib/components/svgs/asterisk-svg.svelte';
 	import { SPEC_PLUGIN_URL, SPEC_URL } from '$lib/constants';
-	import { createRawSnippet } from 'svelte';
 	import type { PageProps } from './$types';
 
 	const { data }: PageProps = $props();

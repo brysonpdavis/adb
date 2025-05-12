@@ -1,19 +1,6 @@
 import { rgbaToThumbHash, thumbHashToDataURL } from 'thumbhash';
 import sharp from 'sharp';
-import specFigma from '$lib/assets/spec-figma.png';
-import annaLaptop from '$lib/assets/anna-laptop.png';
-import specThumbnail from '$lib/assets/spec-thumbnail.png';
-import ingagePreview from '$lib/assets/ingage-preview.png';
-import policymePreview from '$lib/assets/policyme-preview.png';
-import specComments from '$lib/assets/spec-comments.png';
-import specFinal1 from '$lib/assets/spec-final-1.png';
-import specFinal2 from '$lib/assets/spec-final-2.png';
-import specFinal3 from '$lib/assets/spec-final-3.png';
-import specFinal4 from '$lib/assets/spec-final-4.png';
-import specFinal5 from '$lib/assets/spec-final-5.png';
-import specFinal6 from '$lib/assets/spec-final-6.png';
-import specFeedback from '$lib/assets/spec-feedback.png';
-import specPluginScreenshot from '$lib/assets/spec-plugin-screenshot.png';
+import path from 'path';
 
 export interface SerializableHashableImage {
 	src: string;
@@ -23,7 +10,12 @@ export interface SerializableHashableImage {
 	dataUrl: string;
 }
 
+const CWD = process.cwd();
+const ASSETS_PATH = path.join(CWD, 'static', 'assets');
+const createImagePath = (fileName: string) => path.join(ASSETS_PATH, fileName);
+
 export class HashableImage {
+	path: string;
 	src: string;
 	alt: string;
 	width: number;
@@ -31,19 +23,18 @@ export class HashableImage {
 	hash?: Uint8Array;
 	dataUrl?: string;
 
-	constructor(src: string, alt: string, width: number, height: number) {
-		this.src = src;
+	constructor(fileName: string, alt: string, width: number, height: number) {
+		this.path = createImagePath(fileName);
+		this.src = `/assets/${fileName}`;
 		this.alt = alt;
 		this.width = width;
 		this.height = height;
 
-		this.setHash();
+		this.setHash().then(() => this.setDataUrl());
 	}
 
 	async setHash() {
-		const trimmedSrc = this.src.slice(1);
-
-		const { info, data: buf } = await sharp(trimmedSrc)
+		const { info, data: buf } = await sharp(this.path)
 			.resize(100, 100)
 			.ensureAlpha()
 			.raw()
@@ -56,6 +47,18 @@ export class HashableImage {
 		return hash;
 	}
 
+	setDataUrl() {
+		if (!this.hash) {
+			throw new Error('Hash not set');
+		}
+
+		const dataUrl = thumbHashToDataURL(this.hash);
+
+		this.dataUrl = dataUrl;
+
+		return dataUrl;
+	}
+
 	async toSerializable(): Promise<SerializableHashableImage> {
 		let hash: Uint8Array | undefined = this.hash;
 
@@ -66,7 +69,7 @@ export class HashableImage {
 		let dataUrl: string | undefined = this.dataUrl;
 
 		if (!dataUrl) {
-			dataUrl = thumbHashToDataURL(hash);
+			dataUrl = this.setDataUrl();
 		}
 
 		return {
@@ -79,22 +82,27 @@ export class HashableImage {
 	}
 }
 
-export const SPEC_FIGMA = new HashableImage(specFigma, 'alt', 801, 452);
-export const ANNA_LAPTOP = new HashableImage(annaLaptop, 'alt', 300, 300);
-export const SPEC_THUMBNAIL = new HashableImage(specThumbnail, 'alt', 2432, 1222);
-export const SPEC_COMMENTS = new HashableImage(specComments, 'alt', 511, 318);
-export const SPEC_FINAL_1 = new HashableImage(specFinal1, 'final 1', 320, 348);
-export const SPEC_FINAL_2 = new HashableImage(specFinal2, 'final 2', 320, 348);
-export const SPEC_FINAL_3 = new HashableImage(specFinal3, 'final 3', 320, 348);
-export const SPEC_FINAL_4 = new HashableImage(specFinal4, 'final 4', 320, 348);
-export const SPEC_FINAL_5 = new HashableImage(specFinal5, 'final 5', 320, 348);
-export const SPEC_FINAL_6 = new HashableImage(specFinal6, 'final 6', 320, 348);
-export const SPEC_FEEDBACK = new HashableImage(specFeedback, 'spec feedback', 1048, 504);
+export const SPEC_FIGMA = new HashableImage('spec-figma.png', 'alt', 801, 452);
+export const ANNA_LAPTOP = new HashableImage('anna-laptop.png', 'alt', 300, 300);
+export const SPEC_THUMBNAIL = new HashableImage('spec-thumbnail.png', 'alt', 2432, 1222);
+export const SPEC_COMMENTS = new HashableImage('spec-comments.png', 'alt', 511, 318);
+export const SPEC_FINAL_1 = new HashableImage('spec-final-1.png', 'final 1', 320, 348);
+export const SPEC_FINAL_2 = new HashableImage('spec-final-2.png', 'final 2', 320, 348);
+export const SPEC_FINAL_3 = new HashableImage('spec-final-3.png', 'final 3', 320, 348);
+export const SPEC_FINAL_4 = new HashableImage('spec-final-4.png', 'final 4', 320, 348);
+export const SPEC_FINAL_5 = new HashableImage('spec-final-5.png', 'final 5', 320, 348);
+export const SPEC_FINAL_6 = new HashableImage('spec-final-6.png', 'final 6', 320, 348);
+export const SPEC_FEEDBACK = new HashableImage('spec-feedback.png', 'spec feedback', 1048, 504);
 export const SPEC_PLUGIN_SCREENSHOT = new HashableImage(
-	specPluginScreenshot,
+	'spec-plugin-screenshot.png',
 	'spec plugin screenshot',
 	453,
 	278
 );
-export const INGAGE_PREVIEW = new HashableImage(ingagePreview, 'alt', 798, 518);
-export const POLICYME_PREVIEW = new HashableImage(policymePreview, 'policyme preview', 578, 635);
+export const INGAGE_PREVIEW = new HashableImage('ingage-preview.png', 'alt', 798, 518);
+export const POLICYME_PREVIEW = new HashableImage(
+	'policyme-preview.png',
+	'policyme preview',
+	578,
+	635
+);

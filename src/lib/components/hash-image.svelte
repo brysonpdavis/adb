@@ -5,7 +5,6 @@
 
 	interface Props {
 		image: SerializableHashableImage;
-
 		className?: string;
 	}
 

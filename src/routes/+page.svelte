@@ -1,9 +1,9 @@
 <script lang="ts">
-	import specLogo from '$lib/assets/spec-logo.svg';
-	import specWordmarkLogo from '$lib/assets/spec-wordmark-logo.svg';
-	import ingageWordmarkLogo from '$lib/assets/ingage-wordmark-logo.svg';
-	import policymeWordmarkLogo from '$lib/assets/policyme-wordmark-logo.svg';
-	import sprowtWordmarkLogo from '$lib/assets/sprowt-wordmark-logo.svg';
+	import specLogo from '../../static/assets/spec-logo.svg';
+	import specWordmarkLogo from '../../static/assets/spec-wordmark-logo.svg';
+	import ingageWordmarkLogo from '../../static/assets/ingage-wordmark-logo.svg';
+	import policymeWordmarkLogo from '../../static/assets/policyme-wordmark-logo.svg';
+	import sprowtWordmarkLogo from '../../static/assets/sprowt-wordmark-logo.svg';
 	import CaseStudySection from '$lib/components/case-study-section.svelte';
 	import FunButton from '$lib/components/fun-button.svelte';
 	import NameRound from '$lib/components/name-round.svelte';
@@ -87,7 +87,7 @@
 		disabled
 	/>
 </div>
-<LetsConnect />
+<LetsConnect extraPadding />
 
 <!-- in front of main content -->
 <div
