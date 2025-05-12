@@ -48,8 +48,9 @@
 		</a>
 	</div>
 	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">
-		<FunButton text="explore my work" href="/yes" />
-		<FunButton text="my cv" href="/yes" />
+		<!-- TODO add proper hrefs here -->
+		<FunButton text="explore my work" href="/" />
+		<FunButton text="my cv" href="/" />
 	</div>
 </div>
 <div class="flex w-full justify-end pt-2">

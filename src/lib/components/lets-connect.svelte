@@ -19,7 +19,8 @@
 		something exciting, or just want to chat about design—I'd love to hear from you.
 	</div>
 	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">
-		<FunButton text="my cv" href="/yes" newTab />
+		<!-- TODO add proper href here -->
+		<FunButton text="my cv" href="/" newTab />
 		<FunButton text="email" href={`mailto:${ANNA_EMAIL}`} />
 		<FunButton text="linkedin" href={ANNA_LINKEDIN} newTab />
 	</div>
