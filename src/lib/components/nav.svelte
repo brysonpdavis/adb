@@ -2,19 +2,23 @@
 	import { SITE_SECTIONS, type SiteSection } from '$lib/constants';
 	import { cn } from '$lib/utils';
 	import { activeSection } from '$lib/state/active-section.svelte';
+	import { page } from '$app/state';
+
+	const showActive = $derived(page.route.id === '/');
 </script>
 
 {#snippet navSection(section: SiteSection)}
 	{@const isActive = activeSection() === section.name}
+
 	<a href={`/#${section.id}`} class={'group flex flex-row items-center gap-2'}>
-		{#if isActive}
+		{#if isActive && showActive}
 			<div>
 				<div class="bg-primary h-2.5 w-2.5 rounded-full"></div>
 			</div>
 		{/if}
 		<div
 			class={cn('text-sm group-hover:font-bold', {
-				'font-bold': isActive
+				'font-bold': isActive && showActive
 			})}
 		>
 			{section.name}

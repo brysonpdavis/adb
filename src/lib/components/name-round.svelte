@@ -1,5 +1,5 @@
 <script lang="ts">
-	import nameRound from '../../../static/assets/name-round.svg';
+	import nameRound from '$lib/assets/name-round.svg';
 </script>
 
 <div class="relative z-10 h-26 w-26">

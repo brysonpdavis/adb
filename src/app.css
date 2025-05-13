@@ -6,13 +6,15 @@
 
 @plugin 'daisyui/theme' {
 	name: 'danila';
-	default: true;
+	/* default: true; */
 
 	--color-primary: #ff5924;
 	--color-accent: #2457ff;
 	--color-neutral: #ffffff;
-	--color-base-100: #eaeaea;
+	--color-base-100: #f6f5f2;
 	--color-base-200: #dedede;
+	/* darkest */
+	--color-base-300: #333;
 	--color-base-content: #292929;
 }
 

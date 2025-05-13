@@ -14,9 +14,9 @@
 <a class="group w-fit" {href} target={newTab ? '_blank' : undefined}>
 	<button
 		class={cn(
-			'shadow-base-300 flex flex-row gap-4 rounded-full px-8 py-4 shadow-[4px_6px_0_0] outline-1 transition',
+			'shadow-base-300 flex flex-row gap-4 rounded-full px-8 py-4 shadow-[4px_6px_0_0] outline-1 transition duration-300',
 			{
-				'hover:bg-base-300 bg-neutral cursor-pointer': !disabled,
+				'hover:bg-base-300 bg-neutral cursor-pointer hover:shadow-none': !disabled,
 				'bg-base-100 cursor-not-allowed': disabled
 			}
 		)}

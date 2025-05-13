@@ -1,13 +1,13 @@
 import { SITE_SECTIONS, type PageSectionId, type PageSectionName } from '$lib/constants';
 import { onMount } from 'svelte';
 
-export let sectionVisibility: { [key in PageSectionId]: boolean } = $state({
-	about: true,
+export const sectionVisibility: { [key in PageSectionId]: boolean } = $state({
+	home: true,
 	work: false,
 	contact: false
 });
 
-export let activeSection: () => PageSectionName = () => {
+export const activeSection: () => PageSectionName = () => {
 	if (sectionVisibility.contact) {
 		return 'CONTACT';
 	}
@@ -16,12 +16,12 @@ export let activeSection: () => PageSectionName = () => {
 		return 'WORK';
 	}
 
-	return 'ABOUT';
+	return 'HOME';
 };
 
 export const mountPageObserver = () =>
 	onMount(() => {
-		const aboutIntersectionObserver = new IntersectionObserver(
+		const intersectionObserver = new IntersectionObserver(
 			(entries) => {
 				for (const entry of entries) {
 					sectionVisibility[entry.target.id as PageSectionId] = entry.isIntersecting;
@@ -37,23 +37,23 @@ export const mountPageObserver = () =>
 		const contactSection = document.getElementById(SITE_SECTIONS[2].id);
 
 		if (aboutSection) {
-			aboutIntersectionObserver.observe(aboutSection);
+			intersectionObserver.observe(aboutSection);
 		}
 		if (workSection) {
-			aboutIntersectionObserver.observe(workSection);
+			intersectionObserver.observe(workSection);
 		}
 		if (contactSection) {
-			aboutIntersectionObserver.observe(contactSection);
+			intersectionObserver.observe(contactSection);
 		}
 		return () => {
 			if (aboutSection) {
-				aboutIntersectionObserver.unobserve(aboutSection);
+				intersectionObserver.unobserve(aboutSection);
 			}
 			if (workSection) {
-				aboutIntersectionObserver.unobserve(workSection);
+				intersectionObserver.unobserve(workSection);
 			}
 			if (contactSection) {
-				aboutIntersectionObserver.unobserve(contactSection);
+				intersectionObserver.unobserve(contactSection);
 			}
 		};
 	});

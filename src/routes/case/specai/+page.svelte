@@ -64,6 +64,7 @@
 	href={SPEC_URL}
 	description="SpecAI is an AI-powered Figma plugin that helps designers get real-time feedback on their UX/UI work—covering everything from accessibility and alignment to copy and usability."
 	splashImage={SPEC_FIGMA}
+	nextCaseStudyHref="/case/ingage"
 	metricsProps={{
 		role: [{ label: 'Co-Founder' }, { label: 'Product Designer' }],
 		team: [

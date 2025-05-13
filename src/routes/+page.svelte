@@ -1,9 +1,9 @@
 <script lang="ts">
-	import specLogo from '../../static/assets/spec-logo.svg';
-	import specWordmarkLogo from '../../static/assets/spec-wordmark-logo.svg';
-	import ingageWordmarkLogo from '../../static/assets/ingage-wordmark-logo.svg';
-	import policymeWordmarkLogo from '../../static/assets/policyme-wordmark-logo.svg';
-	import sprowtWordmarkLogo from '../../static/assets/sprowt-wordmark-logo.svg';
+	import specLogo from '$lib/assets/spec-logo.svg';
+	import specWordmarkLogo from '$lib/assets/spec-wordmark-logo.svg';
+	import ingageWordmarkLogo from '$lib/assets/ingage-wordmark-logo.svg';
+	import policymeWordmarkLogo from '$lib/assets/policyme-wordmark-logo.svg';
+	import sprowtWordmarkLogo from '$lib/assets/sprowt-wordmark-logo.svg';
 	import CaseStudySection from '$lib/components/case-study-section.svelte';
 	import FunButton from '$lib/components/fun-button.svelte';
 	import NameRound from '$lib/components/name-round.svelte';
@@ -16,7 +16,7 @@
 	import LetsConnect from '$lib/components/lets-connect.svelte';
 
 	const { data }: PageProps = $props();
-	const { annaLaptop, specThumbnail } = data;
+	const { annaLaptop, specThumbnail, ingageThumbnail, policymeThumbnail, sprowtThumbnail } = data;
 
 	mountPageObserver();
 </script>
@@ -27,8 +27,9 @@
 	<MouseFollower color="alt" factor={20} size="small" offset={{ x: 100, y: 130 }} />
 </div>
 
-<div class="flex w-full max-w-[924px] flex-col gap-4 text-pretty" id="about">
-	<div class="m-0 h-36 shrink-0 p-0 lg:h-80"></div>
+<!-- main content -->
+<div class="flex w-full max-w-[924px] flex-col gap-4 text-pretty" id="home">
+	<div class="m-0 h-36 shrink-0 p-0 lg:h-40"></div>
 	<div class="h-24 w-24 overflow-hidden rounded-full">
 		<HashImage image={annaLaptop} className="h-24 w-24" />
 	</div>
@@ -49,7 +50,7 @@
 	</div>
 	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">
 		<!-- TODO add proper hrefs here -->
-		<FunButton text="explore my work" href="/" />
+		<FunButton text="explore my work" href="/#work" />
 		<FunButton text="my cv" href="/" />
 	</div>
 </div>
@@ -59,32 +60,36 @@
 <div class="flex w-full flex-col gap-10" id="work">
 	<div class="m-0 h-36 shrink-0 p-0"></div>
 	<CaseStudySection
-		description="Bridging the gap in design and feedback"
+		description="Bridging the gap in design and feedback."
 		logoHref={SPEC_URL}
 		href="/case/specai"
 		thumbnailSrc={specThumbnail}
 		logoSrc={specWordmarkLogo}
+		imageContainerClassName="pb-8 pt-4 lg:pb-4"
 	/>
 	<CaseStudySection
-		description="Taking a LinkedIn engagement tool from 0 → 1"
+		description="Taking a LinkedIn engagement tool from 0 → 1."
 		logoHref={INGAGE_URL}
 		href="/case/ingage"
-		thumbnailSrc={specThumbnail}
+		thumbnailSrc={ingageThumbnail}
 		logoSrc={ingageWordmarkLogo}
+		imageContainerClassName="pt-4"
 	/>
 	<CaseStudySection
-		description="Introducing a new product line to an existing brand"
+		description="Introducing a new product line to an existing brand."
 		logoHref={POLICYME_URL}
 		href="/case/policyme"
-		thumbnailSrc={specThumbnail}
+		thumbnailSrc={policymeThumbnail}
 		logoSrc={policymeWordmarkLogo}
+		imageContainerClassName="pt-8"
 	/>
 	<CaseStudySection
-		description="Sprowt xx"
+		description="Building a meditation app focused on breath work, and cognitive behavioral techniques."
 		logoHref="https://specai.io"
 		href="/case/specai"
-		thumbnailSrc={specThumbnail}
+		thumbnailSrc={sprowtThumbnail}
 		logoSrc={sprowtWordmarkLogo}
+		imageContainerClassName="pt-12"
 		disabled
 	/>
 </div>

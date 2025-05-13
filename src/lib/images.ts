@@ -82,8 +82,10 @@ export class HashableImage {
 	}
 }
 
-export const SPEC_FIGMA = new HashableImage('spec-figma.png', 'alt', 801, 452);
 export const ANNA_LAPTOP = new HashableImage('anna-laptop.png', 'alt', 300, 300);
+
+// SPEC IMAGES
+export const SPEC_FIGMA = new HashableImage('spec-figma.png', 'alt', 801, 452);
 export const SPEC_THUMBNAIL = new HashableImage('spec-thumbnail.png', 'alt', 2432, 1222);
 export const SPEC_COMMENTS = new HashableImage('spec-comments.png', 'alt', 511, 318);
 export const SPEC_FINAL_1 = new HashableImage('spec-final-1.png', 'final 1', 320, 348);
@@ -99,10 +101,35 @@ export const SPEC_PLUGIN_SCREENSHOT = new HashableImage(
 	453,
 	278
 );
+
+// INGAGE IMAGES
 export const INGAGE_PREVIEW = new HashableImage('ingage-preview.png', 'alt', 798, 518);
+export const INGAGE_THUMBNAIL = new HashableImage(
+	'ingage-thumbnail.png',
+	'ingage thumbnail',
+	2402,
+	1340
+);
+export const INGAGE_PROBLEM = new HashableImage('ingage-problem.png', 'ingage problem', 491, 341);
+
+// POLICYME IMAGES
 export const POLICYME_PREVIEW = new HashableImage(
 	'policyme-preview.png',
 	'policyme preview',
 	578,
 	635
+);
+export const POLICYME_THUMBNAIL = new HashableImage(
+	'policyme-thumbnail.png',
+	'policyme thumbnail',
+	663,
+	373
+);
+
+// SPROWT IMAGES
+export const SPROWT_THUMBNAIL = new HashableImage(
+	'sprowt-thumbnail.png',
+	'sprowt thumbnail',
+	751,
+	373
 );

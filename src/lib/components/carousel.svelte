@@ -13,7 +13,16 @@
 
 <div class="flex w-full flex-col gap-8">
 	<div class="text-center text-2xl font-medium">{title}:</div>
-	<div class={`grid w-full grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3 row-count-${rowCount}`}>
+	<div
+		class={`hidden w-full grid-cols-1 gap-8 md:grid lg:grid-cols-2 xl:grid-cols-3 row-count-${rowCount}`}
+	>
+		{#each images as image}
+			<div class="flex flex-col gap-4">
+				<HashImage {image} className="w-full" />
+			</div>
+		{/each}
+	</div>
+	<div class="grid w-full grid-cols-1 gap-8 md:hidden">
 		{#each images as image}
 			<div class="flex flex-col gap-4">
 				<HashImage {image} className="w-full" />
