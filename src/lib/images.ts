@@ -111,6 +111,79 @@ export const INGAGE_THUMBNAIL = new HashableImage(
 	1340,
 );
 export const INGAGE_PROBLEM = new HashableImage('ingage-problem.png', 'ingage problem', 491, 341);
+export const INGAGE_SCREENSHOT = new HashableImage(
+	'ingage-screenshot.png',
+	'ingage screenshot',
+	444,
+	429,
+);
+export const INGAGE_INPUT_FIELDS = new HashableImage(
+	'ingage-input-fields.png',
+	'ingage input fields',
+	510,
+	334,
+);
+export const INGAGE_BUTTONS = new HashableImage('ingage-buttons.png', 'ingage buttons', 514, 333);
+export const INGAGE_FLOWCHART = new HashableImage(
+	'ingage-flowchart.png',
+	'ingage flowchart',
+	1048,
+	438,
+);
+export const INGAGE_REVIEWS = new HashableImage('ingage-reviews.png', 'ingage reviews', 450, 398);
+export const INGAGE_EXTENSION_1 = new HashableImage(
+	'ingage-extension-1.png',
+	'ingage extension 1',
+	262,
+	452,
+);
+export const INGAGE_EXTENSION_2 = new HashableImage(
+	'ingage-extension-2.png',
+	'ingage extension 2',
+	262,
+	452,
+);
+export const INGAGE_EXTENSION_3 = new HashableImage(
+	'ingage-extension-3.png',
+	'ingage extension 3',
+	262,
+	452,
+);
+export const INGAGE_EXTENSION_4 = new HashableImage(
+	'ingage-extension-4.png',
+	'ingage extension 4',
+	262,
+	452,
+);
+export const INGAGE_EXTENSION_5 = new HashableImage(
+	'ingage-extension-5.png',
+	'ingage extension 5',
+	262,
+	452,
+);
+export const INGAGE_EXTENSION_6 = new HashableImage(
+	'ingage-extension-6.png',
+	'ingage extension 6',
+	262,
+	452,
+);
+export const INGAGE_EXTENSION_7 = new HashableImage(
+	'ingage-extension-7.png',
+	'ingage extension 7',
+	262,
+	452,
+);
+export const INGAGE_EXTENSION_8 = new HashableImage(
+	'ingage-extension-8.png',
+	'ingage extension 8',
+	262,
+	452,
+);
+export const INGAGE_WEB_1 = new HashableImage('ingage-web-1.png', 'ingage web 1', 516, 339);
+export const INGAGE_WEB_2 = new HashableImage('ingage-web-2.png', 'ingage web 2', 516, 339);
+export const INGAGE_WEB_3 = new HashableImage('ingage-web-3.png', 'ingage web 3', 516, 339);
+export const INGAGE_WEB_4 = new HashableImage('ingage-web-4.png', 'ingage web 4', 516, 339);
+export const INGAGE_LAPTOP = new HashableImage('ingage-laptop.png', 'ingage laptop', 1048, 543);
 
 // POLICYME IMAGES
 export const POLICYME_PREVIEW = new HashableImage(

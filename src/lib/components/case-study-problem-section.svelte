@@ -20,7 +20,7 @@
 			{description}
 		</div>
 	</div>
-	<div class="w-full lg:w-1/2">
+	<div class="flex w-full flex-col items-center lg:w-1/2">
 		<HashImage {image} />
 	</div>
 </div>

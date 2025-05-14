@@ -31,9 +31,7 @@
 					<AsteriskSvg className="h-2 w-2" />
 				</div>
 				<div class="text-pretty">
-					<span class="font-bold">
-						{item.heading}:
-					</span>
+					<b>{item.heading}:</b>
 					{item.text}
 				</div>
 			</div>

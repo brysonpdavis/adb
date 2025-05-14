@@ -6,7 +6,6 @@
 	import CaseStudy from '$lib/components/case-study.svelte';
 	import FunButton from '$lib/components/fun-button.svelte';
 	import HashImage from '$lib/components/hash-image.svelte';
-	import LetsConnect from '$lib/components/lets-connect.svelte';
 	import AsteriskSvg from '$lib/components/svgs/asterisk-svg.svelte';
 	import { SPEC_PLUGIN_URL, SPEC_URL } from '$lib/constants';
 	import type { PageProps } from './$types';
@@ -29,34 +28,34 @@
 </script>
 
 {#snippet resultOne()}
-	<span class="font-bold">Too much time</span> spent manually checking alignment, spacing, and contrast.
+	<b>Too much time</b> spent manually checking alignment, spacing, and contrast.
 {/snippet}
 
 {#snippet resultTwo()}
-	<span class="font-bold">Feedback</span> on UX writing and accessibility was often
-	<span class="font-bold">missing or delayed.</span>
+	<b>Feedback</b> on UX writing and accessibility was often
+	<b>missing or delayed.</b>
 {/snippet}
 
 {#snippet resultThree()}
 	Many tools existed for design automation, but few
-	<span class="font-bold"> focused on actual UX principles. </span>
+	<b>focused on actual UX principles.</b>
 {/snippet}
 
 {#snippet impactOne()}
-	Reached <span class="font-bold">1,000+ Figma users</span>
+	Reached <b>1,000+ Figma users</b>
 {/snippet}
 
 {#snippet impactTwo()}
-	Average session time: <span class="font-bold">6+ minutes per user</span>
+	Average session time: <b>6+ minutes per user</b>
 {/snippet}
 
 {#snippet impactThree()}
-	<span class="font-bold"> 32% of users returned </span>
+	<b>32% of users returned</b>
 	within the first week
 {/snippet}
 
 {#snippet impactFour()}
-	User feedback praised <span class="font-bold">clarity, speed, and actionable insights</span>
+	User feedback praised <b>clarity, speed, and actionable insights</b>
 {/snippet}
 
 <CaseStudy
@@ -142,5 +141,4 @@
 		</div>
 	</div>
 	<Carousel images={[SPEC_FEEDBACK]} rowCount={1} title="What our users have to say" />
-	<LetsConnect />
 </CaseStudy>

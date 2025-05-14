@@ -7,6 +7,7 @@
 	import type { SerializableHashableImage } from '$lib/images';
 	import type { Snippet } from 'svelte';
 	import FunButton from './fun-button.svelte';
+	import LetsConnect from '$lib/components/lets-connect.svelte';
 
 	type CaseStudyHeaderProps = {
 		description: string;
@@ -42,7 +43,7 @@
 	</a>
 	<div class="flex flex-col gap-8 lg:flex-row">
 		<div class="flex flex-col gap-8 lg:w-min">
-			<div>
+			<div class="text-pretty">
 				{description}
 			</div>
 			<CaseStudyMetrics {...metricsProps} />
@@ -55,6 +56,12 @@
 	{#if children}
 		<div class="m-auto flex w-full max-w-5xl flex-col gap-8 lg:gap-24">
 			{@render children()}
+			{#if nextCaseStudyHref}
+				<div class="flex h-fit w-full lg:hidden">
+					<FunButton fullWidth text="Next Case Study" href={nextCaseStudyHref} />
+				</div>
+			{/if}
+			<LetsConnect />
 		</div>
 		<span class="h-12 w-full flex-shrink-0"></span>
 	{/if}
@@ -66,7 +73,7 @@
 		class="pointer-events-none fixed top-0 z-10 flex h-screen w-screen flex-col items-end overflow-hidden"
 	>
 		<div class="pointer-events-auto absolute top-20 right-18 hidden lg:flex">
-			<FunButton href={nextCaseStudyHref} text="next case study" />
+			<FunButton href={nextCaseStudyHref} fullWidth text="next case study" />
 		</div>
 	</div>
 {/if}

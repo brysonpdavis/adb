@@ -1,22 +1,19 @@
 import { SITE_SECTIONS, type PageSectionId, type PageSectionName } from '$lib/constants';
+import { TypedObject } from '$lib/utils';
 import { onMount } from 'svelte';
 
-export const sectionVisibility: { [key in PageSectionId]: boolean } = $state({
-	home: true,
-	work: false,
-	contact: false,
+export const sectionVisibility: Record<PageSectionId, number> = $state({
+	home: 1,
+	work: 0,
+	contact: 0,
 });
 
 export const activeSection: () => PageSectionName = () => {
-	if (sectionVisibility.contact) {
-		return 'CONTACT';
-	}
-
-	if (sectionVisibility.work) {
-		return 'WORK';
-	}
-
-	return 'HOME';
+	const sections = TypedObject.entries(sectionVisibility).reduce(
+		([aString, aNumber], [bString, bNumber]) =>
+			aNumber > bNumber ? [aString, aNumber] : [bString, bNumber],
+	);
+	return sections[0].toUpperCase() as PageSectionName;
 };
 
 export const mountPageObserver = () =>
@@ -24,11 +21,11 @@ export const mountPageObserver = () =>
 		const intersectionObserver = new IntersectionObserver(
 			(entries) => {
 				for (const entry of entries) {
-					sectionVisibility[entry.target.id as PageSectionId] = entry.isIntersecting;
+					sectionVisibility[entry.target.id as PageSectionId] = entry.intersectionRatio;
 				}
 			},
 			{
-				threshold: 0.2,
+				threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
 			},
 		);
 
