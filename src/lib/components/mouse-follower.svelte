@@ -11,7 +11,7 @@
 		color = 'primary',
 		size = 'big',
 		factor = 20,
-		offset = { x: 0, y: 0 }
+		offset = { x: 0, y: 0 },
 	}: {
 		color?: 'primary' | 'alt';
 		size: 'big' | 'small';
@@ -37,7 +37,7 @@
 
 			followerPosition = {
 				x: followerPosition.x + deltaX,
-				y: followerPosition.y + deltaY
+				y: followerPosition.y + deltaY,
 			};
 		}, 1000 / 60);
 	});
@@ -49,6 +49,6 @@
 		'bg-primary opacity-20': color === 'primary',
 		'from-accent to-neutral bg-linear-to-b': color === 'alt',
 		'h-100 w-100': size === 'big',
-		'h-32 w-32': size === 'small'
+		'h-32 w-32': size === 'small',
 	})}
 ></div>

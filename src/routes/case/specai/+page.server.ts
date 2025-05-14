@@ -8,7 +8,7 @@ import {
 	SPEC_FINAL_4,
 	SPEC_FINAL_5,
 	SPEC_FINAL_6,
-	SPEC_PLUGIN_SCREENSHOT
+	SPEC_PLUGIN_SCREENSHOT,
 } from '$lib/images';
 
 export const load = async () => {
@@ -22,6 +22,6 @@ export const load = async () => {
 		SPEC_FINAL_5: await SPEC_FINAL_5.toSerializable(),
 		SPEC_FINAL_6: await SPEC_FINAL_6.toSerializable(),
 		SPEC_FEEDBACK: await SPEC_FEEDBACK.toSerializable(),
-		SPEC_PLUGIN_SCREENSHOT: await SPEC_PLUGIN_SCREENSHOT.toSerializable()
+		SPEC_PLUGIN_SCREENSHOT: await SPEC_PLUGIN_SCREENSHOT.toSerializable(),
 	};
 };

@@ -22,13 +22,13 @@
 		team: [
 			{ label: 'Product Designer', count: 1 },
 			{ label: 'QA', count: 1 },
-			{ label: 'Engineer', count: 3 }
+			{ label: 'Engineer', count: 3 },
 		],
 		scope: [{ label: 'Product Research' }, { label: 'User Testing' }, { label: 'UX/UI Design' }],
 		time: {
 			start: 'DEC 2024',
-			end: 'MARCH 2025'
-		}
+			end: 'MARCH 2025',
+		},
 	}}
 >
 	<CaseStudyProblemSection
@@ -47,16 +47,16 @@
 		items={[
 			{
 				heading: 'Quick wins',
-				text: 'I made sure users could get value quickly, like promoting a post or generating a comment instantly.'
+				text: 'I made sure users could get value quickly, like promoting a post or generating a comment instantly.',
 			},
 			{
 				heading: 'Clear and trustworthy UX',
-				text: 'I used transparent language, clean layouts, and visible metrics to build user confidence.'
+				text: 'I used transparent language, clean layouts, and visible metrics to build user confidence.',
 			},
 			{
 				heading: 'Feedback-first UI',
-				text: 'From tooltips to microcopy, every part of the UI helped guide users and explain what Ingage was doing in the background.'
-			}
+				text: 'From tooltips to microcopy, every part of the UI helped guide users and explain what Ingage was doing in the background.',
+			},
 		]}
 	/>
 </CaseStudy>

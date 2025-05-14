@@ -18,7 +18,7 @@
 		{/if}
 		<div
 			class={cn('text-sm group-hover:font-bold', {
-				'font-bold': isActive && showActive
+				'font-bold': isActive && showActive,
 			})}
 		>
 			{section.name}

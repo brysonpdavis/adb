@@ -77,7 +77,7 @@ export class HashableImage {
 			alt: this.alt,
 			width: this.width,
 			height: this.height,
-			dataUrl
+			dataUrl,
 		};
 	}
 }
@@ -99,7 +99,7 @@ export const SPEC_PLUGIN_SCREENSHOT = new HashableImage(
 	'spec-plugin-screenshot.png',
 	'spec plugin screenshot',
 	453,
-	278
+	278,
 );
 
 // INGAGE IMAGES
@@ -108,7 +108,7 @@ export const INGAGE_THUMBNAIL = new HashableImage(
 	'ingage-thumbnail.png',
 	'ingage thumbnail',
 	2402,
-	1340
+	1340,
 );
 export const INGAGE_PROBLEM = new HashableImage('ingage-problem.png', 'ingage problem', 491, 341);
 
@@ -117,13 +117,13 @@ export const POLICYME_PREVIEW = new HashableImage(
 	'policyme-preview.png',
 	'policyme preview',
 	578,
-	635
+	635,
 );
 export const POLICYME_THUMBNAIL = new HashableImage(
 	'policyme-thumbnail.png',
 	'policyme thumbnail',
 	663,
-	373
+	373,
 );
 
 // SPROWT IMAGES
@@ -131,5 +131,5 @@ export const SPROWT_THUMBNAIL = new HashableImage(
 	'sprowt-thumbnail.png',
 	'sprowt thumbnail',
 	751,
-	373
+	373,
 );

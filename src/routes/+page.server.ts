@@ -3,7 +3,7 @@ import {
 	SPEC_THUMBNAIL,
 	SPROWT_THUMBNAIL,
 	POLICYME_THUMBNAIL,
-	INGAGE_THUMBNAIL
+	INGAGE_THUMBNAIL,
 } from '$lib/images';
 
 export const load = async () => {
@@ -12,6 +12,6 @@ export const load = async () => {
 		specThumbnail: await SPEC_THUMBNAIL.toSerializable(),
 		ingageThumbnail: await INGAGE_THUMBNAIL.toSerializable(),
 		policymeThumbnail: await POLICYME_THUMBNAIL.toSerializable(),
-		sprowtThumbnail: await SPROWT_THUMBNAIL.toSerializable()
+		sprowtThumbnail: await SPROWT_THUMBNAIL.toSerializable(),
 	};
 };

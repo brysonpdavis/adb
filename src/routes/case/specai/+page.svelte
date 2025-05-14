@@ -22,7 +22,7 @@
 		SPEC_FINAL_5,
 		SPEC_FINAL_6,
 		SPEC_FEEDBACK,
-		SPEC_PLUGIN_SCREENSHOT
+		SPEC_PLUGIN_SCREENSHOT,
 	} = data;
 
 	const BRAND_COLOR = '#5E3CE4';
@@ -69,18 +69,18 @@
 		role: [{ label: 'Co-Founder' }, { label: 'Product Designer' }],
 		team: [
 			{ label: 'Founders', count: 2 },
-			{ label: 'Engineer', count: 1 }
+			{ label: 'Engineer', count: 1 },
 		],
 		scope: [
 			{ label: 'Product Research' },
 			{ label: 'User Testing' },
 			{ label: 'UX/UI Design' },
-			{ label: 'Product Marketing' }
+			{ label: 'Product Marketing' },
 		],
 		time: {
 			start: 'AUG 2024',
-			end: 'ONGOING'
-		}
+			end: 'ONGOING',
+		},
 	}}
 >
 	<CaseStudyProblemSection
@@ -102,16 +102,16 @@
 		items={[
 			{
 				heading: 'Conversational UI',
-				text: 'Insights are delivered in plain, constructive language.'
+				text: 'Insights are delivered in plain, constructive language.',
 			},
 			{
 				heading: 'Flexible Feedback Options',
-				text: "Designers can choose exactly what kind of help they need—whether it's copywriting tips, visual checks, or accessibility guidance."
+				text: "Designers can choose exactly what kind of help they need—whether it's copywriting tips, visual checks, or accessibility guidance.",
 			},
 			{
 				heading: 'Easy to get started',
-				text: 'Designers can log in with their email, and start analyzing their work directly in Figma with just one click.'
-			}
+				text: 'Designers can log in with their email, and start analyzing their work directly in Figma with just one click.',
+			},
 		]}
 	/>
 	<Carousel

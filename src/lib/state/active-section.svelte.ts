@@ -4,7 +4,7 @@ import { onMount } from 'svelte';
 export const sectionVisibility: { [key in PageSectionId]: boolean } = $state({
 	home: true,
 	work: false,
-	contact: false
+	contact: false,
 });
 
 export const activeSection: () => PageSectionName = () => {
@@ -28,8 +28,8 @@ export const mountPageObserver = () =>
 				}
 			},
 			{
-				threshold: 0.2
-			}
+				threshold: 0.2,
+			},
 		);
 
 		const aboutSection = document.getElementById(SITE_SECTIONS[0].id);

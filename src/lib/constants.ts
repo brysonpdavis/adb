@@ -6,7 +6,7 @@ export type SiteSection = {
 export const SITE_SECTIONS = [
 	{ name: 'HOME', id: 'home' },
 	{ name: 'WORK', id: 'work' },
-	{ name: 'CONTACT', id: 'contact' }
+	{ name: 'CONTACT', id: 'contact' },
 ] as const satisfies SiteSection[];
 
 export const SECTION_NAMES = SITE_SECTIONS.map((section) => section.name);

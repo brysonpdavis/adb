@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CaseStudyMetrics, {
-		type CaseStudyMetricsProps
+		type CaseStudyMetricsProps,
 	} from '$lib/components/case-study-metrics.svelte';
 	import HashImage from '$lib/components/hash-image.svelte';
 	import ArrowUpRightSvg from '$lib/components/svgs/arrow-up-right-svg.svelte';
@@ -25,7 +25,7 @@
 		splashImage,
 		metricsProps,
 		nextCaseStudyHref,
-		children
+		children,
 	}: CaseStudyHeaderProps = $props();
 </script>
 

@@ -21,7 +21,7 @@
 		thumbnailSrc,
 		logoSrc,
 		disabled = false,
-		imageContainerClassName
+		imageContainerClassName,
 	}: Props = $props();
 </script>
 
