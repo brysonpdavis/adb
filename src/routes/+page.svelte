@@ -28,7 +28,7 @@
 </div>
 
 <!-- main content -->
-<div class="flex w-full max-w-[924px] flex-col gap-4 text-pretty" id="home">
+<div class="flex w-full max-w-[924px] flex-col gap-4 text-pretty" id="about">
 	<div class="m-0 h-36 shrink-0 p-0 lg:h-40"></div>
 	<div class="h-24 w-24 overflow-hidden rounded-full">
 		<HashImage image={annaLaptop} className="h-24 w-24" />

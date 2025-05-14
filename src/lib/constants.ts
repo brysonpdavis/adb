@@ -4,7 +4,7 @@ export type SiteSection = {
 };
 
 export const SITE_SECTIONS = [
-	{ name: 'HOME', id: 'home' },
+	{ name: 'ABOUT', id: 'about' },
 	{ name: 'WORK', id: 'work' },
 	{ name: 'CONTACT', id: 'contact' },
 ] as const satisfies SiteSection[];

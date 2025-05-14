@@ -3,7 +3,7 @@ import { TypedObject } from '$lib/utils';
 import { onMount } from 'svelte';
 
 export const sectionVisibility: Record<PageSectionId, number> = $state({
-	home: 1,
+	about: 1,
 	work: 0,
 	contact: 0,
 });
