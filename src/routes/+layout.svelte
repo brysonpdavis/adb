@@ -2,8 +2,10 @@
 	import '../app.css';
 	import Footer from '$lib/components/footer.svelte';
 	import { inject } from '@vercel/analytics';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 
 	inject();
+	injectSpeedInsights();
 
 	let { children } = $props();
 </script>
