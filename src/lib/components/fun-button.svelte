@@ -8,13 +8,22 @@
 		disabled?: boolean;
 		newTab?: boolean;
 		fullWidth?: boolean;
+		download?: boolean;
 	}
-	let { text, href, newTab = false, disabled = false, fullWidth = false }: Props = $props();
+	let {
+		text,
+		href,
+		newTab = false,
+		disabled = false,
+		fullWidth = false,
+		download,
+	}: Props = $props();
 </script>
 
 <a
 	class={cn('group', { 'w-fit': !fullWidth, 'w-full': fullWidth })}
 	{href}
+	{download}
 	target={newTab ? '_blank' : undefined}
 >
 	<button

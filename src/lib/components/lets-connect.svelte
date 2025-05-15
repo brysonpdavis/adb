@@ -2,6 +2,7 @@
 	import { ANNA_EMAIL, ANNA_LINKEDIN } from '$lib/constants';
 	import FunButton from '$lib/components/fun-button.svelte';
 	import { cn } from '$lib/utils';
+	import ResumeButton from '$lib/components/resume-button.svelte';
 
 	const { extraPadding }: { extraPadding?: boolean } = $props();
 </script>
@@ -19,8 +20,7 @@
 		something exciting, or just want to chat about design—I'd love to hear from you.
 	</div>
 	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">
-		<!-- TODO add proper href here -->
-		<FunButton text="my cv" href="/" newTab />
+		<ResumeButton />
 		<FunButton text="email" href={`mailto:${ANNA_EMAIL}`} />
 		<FunButton text="linkedin" href={ANNA_LINKEDIN} newTab />
 	</div>

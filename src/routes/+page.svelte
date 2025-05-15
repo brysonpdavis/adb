@@ -14,6 +14,7 @@
 	import type { PageProps } from './$types';
 	import MouseFollower from '$lib/components/mouse-follower.svelte';
 	import LetsConnect from '$lib/components/lets-connect.svelte';
+	import ResumeButton from '$lib/components/resume-button.svelte';
 
 	const { data }: PageProps = $props();
 	const { annaLaptop, specThumbnail, ingageThumbnail, policymeThumbnail, sprowtThumbnail } = data;
@@ -49,9 +50,8 @@
 		</a>
 	</div>
 	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">
-		<!-- TODO add proper hrefs here -->
 		<FunButton text="explore my work" href="/#work" />
-		<FunButton text="my cv" href="/" />
+		<ResumeButton />
 	</div>
 </div>
 <div class="flex w-full justify-end pt-2">
@@ -82,6 +82,7 @@
 		thumbnailSrc={policymeThumbnail}
 		logoSrc={policymeWordmarkLogo}
 		imageContainerClassName="pt-8"
+		disabled
 	/>
 	<CaseStudySection
 		description="Building a meditation app focused on breath work, and cognitive behavioral techniques."

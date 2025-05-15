@@ -16,7 +16,7 @@
 	<div class="flex w-full flex-col gap-4 lg:w-1/2">
 		<div class="text-base font-normal uppercase" style={`color: ${brandColor};`}>the problem</div>
 		<div class="text-2xl font-medium">{title}</div>
-		<div class="text-pretty">
+		<div class="text-pretty whitespace-pre-line">
 			{description}
 		</div>
 	</div>

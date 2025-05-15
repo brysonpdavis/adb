@@ -84,7 +84,8 @@
 >
 	<CaseStudyProblemSection
 		title="Bridging the gap in design feedback"
-		description="As a product designer, I often found myself craving a second set of eyes during the design process—especially for quick gut checks on accessibility, UX clarity, and copy tone. After interviewing designers across levels and industries, we found a shared frustration: feedback was slow, inconsistent, and dependent on team availability. There was a clear need for real-time, early-stage feedback that designers could trust."
+		description={`After interviewing designers across levels and industries, we found a shared frustration: feedback was slow, inconsistent, and dependent on team availability. There was a clear need for real-time, early-stage feedback that designers could trust.  \n
+					  This is how we created SpecAI. An AI feedback tool that would help designers during the design process with quick gut checks, accessibility questions and help with copy.`}
 		brandColor={BRAND_COLOR}
 		image={SPEC_COMMENTS}
 	/>

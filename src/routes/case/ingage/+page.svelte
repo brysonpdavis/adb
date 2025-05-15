@@ -34,6 +34,17 @@
 	} = data;
 
 	const BRAND_COLOR = '#5E3CE4';
+
+	const PRODUCT_BULLET_POINTS = [
+		{
+			title: 'Web App',
+			body: 'The main hub where users can submit posts for promotion, track performance, and view detailed reports. This dashboard prioritized clarity and speed and giving users full control in just a few clicks.',
+		},
+		{
+			title: 'Chrome Extension',
+			body: 'Designed for quick analytics on LinkedIn. Users could generate engagement reports and helpful data without leaving the LinkedIn interface.',
+		},
+	];
 </script>
 
 {#snippet impactOne()}
@@ -53,7 +64,6 @@
 	href={INGAGE_URL}
 	description="Ingage helps you grow on LinkedIn with smart engagement, AI comments, and authentic reach—no ads or agencies needed."
 	splashImage={INGAGE_PREVIEW}
-	nextCaseStudyHref="/case/policyme"
 	metricsProps={{
 		role: [{ label: 'Product Designer' }],
 		team: [
@@ -129,6 +139,33 @@
 	<div class="w-full">
 		<HashImage image={INGAGE_FLOWCHART} />
 	</div>
+	<div class="flex w-full flex-col gap-8 lg:flex-row lg:gap-20">
+		<div class="flex w-full flex-col gap-4 lg:w-1/2">
+			<div class="text-base font-normal uppercase" style={`color: ${BRAND_COLOR};`}>
+				the product
+			</div>
+			<div class="text-2xl font-medium">Designing the Web platform and Chrome Extension</div>
+			<div class="text-pretty">
+				To meet users where they work, we designed Ingage as both a full-featured web platform and a
+				Chrome extension.
+			</div>
+		</div>
+		<!-- bullet points -->
+		<div class="flex w-full flex-col items-start gap-4 lg:w-1/2">
+			{#each PRODUCT_BULLET_POINTS as bulletPoint}
+				<div class="flex flex-row gap-1">
+					<div class="pt-2">
+						<AsteriskSvg className="h-2 w-2" />
+					</div>
+					<div class="text-pretty">
+						<b>{bulletPoint.title}</b>
+						{bulletPoint.body}
+					</div>
+				</div>
+			{/each}
+		</div>
+	</div>
+
 	<Carousel
 		gap="small"
 		images={[
