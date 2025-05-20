@@ -14,7 +14,7 @@
 </script>
 
 <div class="flex w-full flex-col gap-8">
-	<div class="text-center text-2xl font-medium">{title}:</div>
+	<div class="text-center text-2xl font-medium">{title}</div>
 	<div
 		class={cn(
 			`hidden w-full grid-cols-1 md:grid lg:grid-cols-2 xl:grid-cols-3 row-count-${rowCount}`,

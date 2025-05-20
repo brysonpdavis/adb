@@ -1,6 +1,7 @@
 import { rgbaToThumbHash, thumbHashToDataURL } from 'thumbhash';
 import sharp from 'sharp';
 import path from 'path';
+import { TypedObject } from '$lib/utils';
 
 export interface SerializableHashableImage {
 	src: string;
@@ -81,6 +82,16 @@ export class HashableImage {
 		};
 	}
 }
+
+export const allImagesToSerializable = async <T extends string>(
+	images: Record<T, HashableImage>,
+) => {
+	const promises = TypedObject.entries(images).map(
+		async ([key, image]) => [key, await image.toSerializable()] as [T, SerializableHashableImage],
+	);
+
+	return TypedObject.fromEntries(await Promise.all(promises));
+};
 
 export const ANNA_LAPTOP = new HashableImage('anna-laptop.png', 'alt', 300, 300);
 
@@ -197,6 +208,78 @@ export const POLICYME_THUMBNAIL = new HashableImage(
 	'policyme thumbnail',
 	663,
 	373,
+);
+export const POLICYME_PROBLEM = new HashableImage(
+	'policyme-problem.png',
+	'policyme problem',
+	463,
+	380,
+);
+export const POLICYME_INTERVIEW_1 = new HashableImage(
+	'policyme-interview-1.png',
+	'policyme interview 1',
+	504,
+	285,
+);
+export const POLICYME_INTERVIEW_2 = new HashableImage(
+	'policyme-interview-2.png',
+	'policyme interview 2',
+	504,
+	285,
+);
+export const POLICYME_MOBILE_1 = new HashableImage(
+	'policyme-mobile-1.png',
+	'policyme mobile 1',
+	323,
+	647,
+);
+export const POLICYME_MOBILE_2 = new HashableImage(
+	'policyme-mobile-2.png',
+	'policyme mobile 2',
+	323,
+	647,
+);
+export const POLICYME_MOBILE_3 = new HashableImage(
+	'policyme-mobile-3.png',
+	'policyme mobile 3',
+	323,
+	647,
+);
+export const POLICYME_DESKTOP_1 = new HashableImage(
+	'policyme-desktop-1.png',
+	'policyme desktop 1',
+	1048,
+	542,
+);
+export const POLICYME_DESKTOP_2 = new HashableImage(
+	'policyme-desktop-2.png',
+	'policyme desktop 2',
+	1048,
+	542,
+);
+export const POLICYME_DESKTOP_3 = new HashableImage(
+	'policyme-desktop-3.png',
+	'policyme desktop 3',
+	1048,
+	542,
+);
+export const POLICYME_DESIGN_ELEMENTS = new HashableImage(
+	'policyme-design-elements.png',
+	'policyme design elements',
+	1048,
+	619,
+);
+export const POLICYME_DESIGN_SYSTEM = new HashableImage(
+	'policyme-design-system.png',
+	'policyme design system',
+	449,
+	296,
+);
+export const POLICYME_IMPACT = new HashableImage(
+	'policyme-impact.png',
+	'policyme impact',
+	523,
+	333,
 );
 
 // SPROWT IMAGES

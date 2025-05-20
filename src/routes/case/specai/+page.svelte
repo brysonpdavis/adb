@@ -1,12 +1,10 @@
 <script lang="ts">
 	import Carousel from '$lib/components/carousel.svelte';
+	import CaseStudyImpact from '$lib/components/case-study-impact.svelte';
 	import CaseStudyInterviewResults from '$lib/components/case-study-interview-results.svelte';
 	import CaseStudyProblemSection from '$lib/components/case-study-problem-section.svelte';
 	import CaseStudySolutionRoleSection from '$lib/components/case-study-solution-role-section.svelte';
 	import CaseStudy from '$lib/components/case-study.svelte';
-	import FunButton from '$lib/components/fun-button.svelte';
-	import HashImage from '$lib/components/hash-image.svelte';
-	import AsteriskSvg from '$lib/components/svgs/asterisk-svg.svelte';
 	import { SPEC_PLUGIN_URL, SPEC_URL } from '$lib/constants';
 	import type { PageProps } from './$types';
 
@@ -119,27 +117,13 @@
 		rowCount={3}
 		title="The final designs"
 	/>
-	<div class="flex flex-col gap-8 lg:flex-row lg:gap-20">
-		<div class="flex w-full flex-col gap-4 lg:w-1/2">
-			<div class="text-base font-normal uppercase" style={`color: ${BRAND_COLOR};`}>
-				results & impact
-			</div>
-			<div class="text-2xl font-medium">Within 8 weeks of public launch:</div>
-			{#each [impactOne, impactTwo, impactThree, impactFour] as item}
-				<div class="flex flex-row gap-1">
-					<div class="pt-2">
-						<AsteriskSvg className="h-2 w-2" />
-					</div>
-					<div class="text-pretty">
-						{@render item()}
-					</div>
-				</div>
-			{/each}
-			<FunButton href={SPEC_PLUGIN_URL} text="check out spec.ai on figma" newTab />
-		</div>
-		<div class="w-full lg:w-1/2">
-			<HashImage image={SPEC_PLUGIN_SCREENSHOT} className="w-full" />
-		</div>
-	</div>
+	<CaseStudyImpact
+		brandColor={BRAND_COLOR}
+		title="Within 8 weeks of public launch:"
+		impacts={[impactOne, impactTwo, impactThree, impactFour]}
+		image={SPEC_PLUGIN_SCREENSHOT}
+		ctaHref={SPEC_PLUGIN_URL}
+		ctaText="check out spec.ai on figma"
+	/>
 	<Carousel images={[SPEC_FEEDBACK]} rowCount={1} title="What our users have to say" />
 </CaseStudy>

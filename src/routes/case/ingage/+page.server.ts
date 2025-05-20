@@ -1,4 +1,5 @@
 import {
+	allImagesToSerializable,
 	INGAGE_BUTTONS,
 	INGAGE_EXTENSION_1,
 	INGAGE_EXTENSION_2,
@@ -22,26 +23,26 @@ import {
 } from '$lib/images';
 
 export const load = async () => {
-	return {
-		INGAGE_PREVIEW: await INGAGE_PREVIEW.toSerializable(),
-		INGAGE_PROBLEM: await INGAGE_PROBLEM.toSerializable(),
-		INGAGE_SCREENSHOT: await INGAGE_SCREENSHOT.toSerializable(),
-		INGAGE_INPUT_FIELDS: await INGAGE_INPUT_FIELDS.toSerializable(),
-		INGAGE_BUTTONS: await INGAGE_BUTTONS.toSerializable(),
-		INGAGE_FLOWCHART: await INGAGE_FLOWCHART.toSerializable(),
-		INGAGE_REVIEWS: await INGAGE_REVIEWS.toSerializable(),
-		INGAGE_EXTENSION_1: await INGAGE_EXTENSION_1.toSerializable(),
-		INGAGE_EXTENSION_2: await INGAGE_EXTENSION_2.toSerializable(),
-		INGAGE_EXTENSION_3: await INGAGE_EXTENSION_3.toSerializable(),
-		INGAGE_EXTENSION_4: await INGAGE_EXTENSION_4.toSerializable(),
-		INGAGE_EXTENSION_5: await INGAGE_EXTENSION_5.toSerializable(),
-		INGAGE_EXTENSION_6: await INGAGE_EXTENSION_6.toSerializable(),
-		INGAGE_EXTENSION_7: await INGAGE_EXTENSION_7.toSerializable(),
-		INGAGE_EXTENSION_8: await INGAGE_EXTENSION_8.toSerializable(),
-		INGAGE_WEB_1: await INGAGE_WEB_1.toSerializable(),
-		INGAGE_WEB_2: await INGAGE_WEB_2.toSerializable(),
-		INGAGE_WEB_3: await INGAGE_WEB_3.toSerializable(),
-		INGAGE_WEB_4: await INGAGE_WEB_4.toSerializable(),
-		INGAGE_LAPTOP: await INGAGE_LAPTOP.toSerializable(),
-	};
+	return await allImagesToSerializable({
+		INGAGE_PREVIEW,
+		INGAGE_PROBLEM,
+		INGAGE_SCREENSHOT,
+		INGAGE_INPUT_FIELDS,
+		INGAGE_BUTTONS,
+		INGAGE_FLOWCHART,
+		INGAGE_REVIEWS,
+		INGAGE_EXTENSION_1,
+		INGAGE_EXTENSION_2,
+		INGAGE_EXTENSION_3,
+		INGAGE_EXTENSION_4,
+		INGAGE_EXTENSION_5,
+		INGAGE_EXTENSION_6,
+		INGAGE_EXTENSION_7,
+		INGAGE_EXTENSION_8,
+		INGAGE_WEB_1,
+		INGAGE_WEB_2,
+		INGAGE_WEB_3,
+		INGAGE_WEB_4,
+		INGAGE_LAPTOP,
+	});
 };

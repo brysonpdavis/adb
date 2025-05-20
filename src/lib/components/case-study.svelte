@@ -8,12 +8,14 @@
 	import type { Snippet } from 'svelte';
 	import FunButton from './fun-button.svelte';
 	import LetsConnect from '$lib/components/lets-connect.svelte';
+	import { cn } from '$lib/utils';
 
 	type CaseStudyHeaderProps = {
 		description: string;
 		href: string;
 		title: string;
 		splashImage: SerializableHashableImage;
+		splashImageClassName?: string;
 		metricsProps: CaseStudyMetricsProps;
 		nextCaseStudyHref?: string;
 		children?: Snippet;
@@ -24,6 +26,7 @@
 		href,
 		title,
 		splashImage,
+		splashImageClassName,
 		metricsProps,
 		nextCaseStudyHref,
 		children,
@@ -48,7 +51,7 @@
 			</div>
 			<CaseStudyMetrics {...metricsProps} />
 		</div>
-		<div class="flex w-full content-center items-center justify-center">
+		<div class={cn(splashImageClassName, 'flex w-full content-center items-center justify-center')}>
 			<HashImage image={splashImage} />
 		</div>
 	</div>

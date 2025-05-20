@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Carousel from '$lib/components/carousel.svelte';
+	import CaseStudyImpact from '$lib/components/case-study-impact.svelte';
 	import CaseStudyProblemSection from '$lib/components/case-study-problem-section.svelte';
 	import CaseStudySolutionRoleSection from '$lib/components/case-study-solution-role-section.svelte';
 	import CaseStudy from '$lib/components/case-study.svelte';
-	import FunButton from '$lib/components/fun-button.svelte';
 	import HashImage from '$lib/components/hash-image.svelte';
 	import AsteriskSvg from '$lib/components/svgs/asterisk-svg.svelte';
 	import { INGAGE_URL } from '$lib/constants';
@@ -64,6 +64,7 @@
 	href={INGAGE_URL}
 	description="Ingage helps you grow on LinkedIn with smart engagement, AI comments, and authentic reach—no ads or agencies needed."
 	splashImage={INGAGE_PREVIEW}
+	nextCaseStudyHref="/case/policyme"
 	metricsProps={{
 		role: [{ label: 'Product Designer' }],
 		team: [
@@ -187,29 +188,13 @@
 		rowCount={2}
 		title="Web App"
 	/>
-	<div class="w-full">
-		<HashImage image={INGAGE_LAPTOP} />
-	</div>
-	<div class="flex flex-col gap-8 lg:flex-row lg:gap-20">
-		<div class="flex w-full flex-col gap-4 lg:w-1/2">
-			<div class="text-base font-normal uppercase" style={`color: ${BRAND_COLOR};`}>
-				results & impact
-			</div>
-			<div class="text-2xl font-medium">From December 2024 launch to present day:</div>
-			{#each [impactOne, impactTwo, impactThree] as item}
-				<div class="flex flex-row gap-1">
-					<div class="pt-2">
-						<AsteriskSvg className="h-2 w-2" />
-					</div>
-					<div class="text-pretty">
-						{@render item()}
-					</div>
-				</div>
-			{/each}
-			<FunButton href={INGAGE_URL} text="check out ingage" newTab />
-		</div>
-		<div class="w-full lg:w-1/2">
-			<HashImage image={INGAGE_REVIEWS} className="w-full" />
-		</div>
-	</div>
+	<HashImage image={INGAGE_LAPTOP} className="w-full" />
+	<CaseStudyImpact
+		title="From December 2024 launch to present day:"
+		brandColor={BRAND_COLOR}
+		impacts={[impactOne, impactTwo, impactThree]}
+		image={INGAGE_REVIEWS}
+		ctaText="check out ingage"
+		ctaHref={INGAGE_URL}
+	/>
 </CaseStudy>

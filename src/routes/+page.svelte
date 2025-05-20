@@ -82,7 +82,6 @@
 		thumbnailSrc={policymeThumbnail}
 		logoSrc={policymeWordmarkLogo}
 		imageContainerClassName="pt-8"
-		disabled
 	/>
 	<CaseStudySection
 		description="Building a meditation app focused on breath work, and cognitive behavioral techniques."
