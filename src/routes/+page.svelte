@@ -37,10 +37,13 @@
 	<div class="text-2xl font-normal uppercase">hi i'm anna</div>
 	<div class="text-4xl leading-14 font-medium uppercase">
 		product designer & founder with 6+ years of experience. based in
-		<span class="line-through"> toronto, on</span>
 		<span class="text-primary underline">new york, ny.</span>
 	</div>
-	<div class="mt-2 flex flex-row gap-2 text-2xl leading-14">
+	<div class="text-lg">
+		Over the years, I've worked across early-stage startups and growing teams, primarily in
+		healthcare and insurance. Shaping everything from 0→1 products to redesigns and brand refreshes.
+	</div>
+	<div class="flex flex-row gap-2 text-lg">
 		Currently working on
 		<a
 			class="hover:text-primary flex flex-row items-center gap-2 underline"
@@ -59,39 +62,55 @@
 </div>
 <div class="flex w-full flex-col gap-10" id="work">
 	<div class="m-0 h-36 shrink-0 p-0"></div>
-	<CaseStudySection
-		description="Bridging the gap in design and feedback."
-		logoHref={SPEC_URL}
-		href="/case/specai"
-		thumbnailSrc={specThumbnail}
-		logoSrc={specWordmarkLogo}
-		imageContainerClassName="pb-8 pt-4 lg:pb-4"
-	/>
-	<CaseStudySection
-		description="Taking a LinkedIn engagement tool from 0 → 1."
-		logoHref={INGAGE_URL}
-		href="/case/ingage"
-		thumbnailSrc={ingageThumbnail}
-		logoSrc={ingageWordmarkLogo}
-		imageContainerClassName="pt-4"
-	/>
-	<CaseStudySection
-		description="Introducing a new product line to an existing brand."
-		logoHref={POLICYME_URL}
-		href="/case/policyme"
-		thumbnailSrc={policymeThumbnail}
-		logoSrc={policymeWordmarkLogo}
-		imageContainerClassName="pt-8"
-	/>
-	<CaseStudySection
-		description="Building a meditation app focused on breath work, and cognitive behavioral techniques."
-		logoHref="https://specai.io"
-		href="/case/specai"
-		thumbnailSrc={sprowtThumbnail}
-		logoSrc={sprowtWordmarkLogo}
-		imageContainerClassName="pt-12"
-		disabled
-	/>
+	<div class="flex w-full flex-col gap-10 lg:flex-row">
+		<div class="w-full lg:w-1/2">
+			<CaseStudySection
+				description="SpecAI is an AI-powered Figma plugin that helps designers get real-time feedback on their work."
+				bullets={['Product Strategy', 'UX/UI Design', 'User Research']}
+				logoHref={SPEC_URL}
+				href="/case/specai"
+				thumbnailSrc={specThumbnail}
+				logoSrc={specWordmarkLogo}
+				imageContainerClassName="pb-8"
+			/>
+		</div>
+		<div class="w-full lg:w-1/2">
+			<CaseStudySection
+				description="Ingage is a platform that helps you grow on LinkedIn with smart engagement, AI comments, and authentic reach."
+				bullets={['UX/UI Design', 'User Research', 'Brand & Visual Identity']}
+				logoHref={INGAGE_URL}
+				href="/case/ingage"
+				thumbnailSrc={ingageThumbnail}
+				logoSrc={ingageWordmarkLogo}
+				logoHeightPx={32}
+			/>
+		</div>
+	</div>
+	<div class="flex w-full flex-col gap-10 lg:flex-row">
+		<div class="w-full lg:w-1/2">
+			<CaseStudySection
+				description="PolicyMe is a Canadian digital insurance platform that simplifies the process of getting life, critical illness, and health & dental insurance."
+				bullets={['UX/UI Design', 'User Research & Interviews', 'Product Research']}
+				logoHref={POLICYME_URL}
+				href="/case/policyme"
+				thumbnailSrc={policymeThumbnail}
+				logoSrc={policymeWordmarkLogo}
+				logoHeightPx={28}
+			/>
+		</div>
+		<div class="w-full lg:w-1/2">
+			<CaseStudySection
+				description="Sprowt is a mobile app designed to help users strengthen their emotional intelligence through guided meditative practices."
+				bullets={['UX/UI Design', 'Brand & Visual Identity', 'Social Media Design']}
+				logoHref="https://specai.io"
+				href="/case/specai"
+				thumbnailSrc={sprowtThumbnail}
+				logoSrc={sprowtWordmarkLogo}
+				logoHeightPx={32}
+				disabled
+			/>
+		</div>
+	</div>
 </div>
 <LetsConnect extraPadding />
 

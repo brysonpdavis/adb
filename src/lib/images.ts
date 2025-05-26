@@ -206,8 +206,8 @@ export const POLICYME_PREVIEW = new HashableImage(
 export const POLICYME_THUMBNAIL = new HashableImage(
 	'policyme-thumbnail.png',
 	'policyme thumbnail',
-	663,
-	373,
+	509,
+	306,
 );
 export const POLICYME_PROBLEM = new HashableImage(
 	'policyme-problem.png',
@@ -286,6 +286,6 @@ export const POLICYME_IMPACT = new HashableImage(
 export const SPROWT_THUMBNAIL = new HashableImage(
 	'sprowt-thumbnail.png',
 	'sprowt thumbnail',
-	751,
-	373,
+	509,
+	309,
 );
