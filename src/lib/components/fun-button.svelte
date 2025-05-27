@@ -9,6 +9,7 @@
 		newTab?: boolean;
 		fullWidth?: boolean;
 		download?: boolean;
+		isGrouped?: boolean;
 	}
 	let {
 		text,
@@ -17,11 +18,12 @@
 		disabled = false,
 		fullWidth = false,
 		download,
+		isGrouped = false,
 	}: Props = $props();
 </script>
 
 <a
-	class={cn('group', { 'w-fit': !fullWidth, 'w-full': fullWidth })}
+	class={cn({ 'w-fit': !fullWidth, 'w-full': fullWidth, group: !isGrouped })}
 	{href}
 	{download}
 	target={newTab ? '_blank' : undefined}
@@ -30,7 +32,7 @@
 		class={cn(
 			'shadow-base-300 flex flex-row gap-4 rounded-full px-8 py-2 shadow-[4px_6px_0_0] outline-1 transition duration-300',
 			{
-				'hover:bg-base-300 bg-neutral cursor-pointer hover:shadow-none': !disabled,
+				'group-hover:bg-base-300 bg-neutral cursor-pointer group-hover:shadow-none': !disabled,
 				'bg-base-100 cursor-not-allowed': disabled,
 				'w-full justify-center': fullWidth,
 			},

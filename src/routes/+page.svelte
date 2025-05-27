@@ -46,7 +46,7 @@
 	<div class="flex flex-row gap-2 text-lg">
 		Currently working on
 		<a
-			class="hover:text-primary flex flex-row items-center gap-2 underline"
+			class="hover:text-primary flex flex-row items-center gap-2 underline transition duration-300"
 			href="http://www.specai.io"
 		>
 			spec.ai <img src={specLogo} alt="spec logo" class="h-6 w-6" />

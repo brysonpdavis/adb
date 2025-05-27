@@ -51,7 +51,7 @@
 				<div class="w-fit">{bullet}</div>
 			{/each}
 		</div>
-		<FunButton text={disabled ? 'coming soon' : 'see case study'} {href} {disabled} />
+		<FunButton isGrouped text={disabled ? 'coming soon' : 'see case study'} {href} {disabled} />
 	</div>
 	<div class="h-fit w-full lg:w-auto">
 		<div class={cn('m-auto flex h-full max-w-144 flex-row', imageContainerClassName)}>

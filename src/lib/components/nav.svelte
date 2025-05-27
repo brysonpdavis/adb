@@ -12,7 +12,7 @@
 			<div class={cn('h-2.5 w-2.5', { 'bg-primary rounded-full': isActive })}></div>
 		</div>
 		<div
-			class={cn('flex-grow text-sm group-hover:font-bold', {
+			class={cn('flex-grow text-sm transition-all duration-300 group-hover:font-bold', {
 				'font-bold': isActive,
 			})}
 		>
