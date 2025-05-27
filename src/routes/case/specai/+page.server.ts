@@ -10,6 +10,7 @@ import {
 	SPEC_FINAL_5,
 	SPEC_FINAL_6,
 	SPEC_PLUGIN_SCREENSHOT,
+	SPEC_FUTURE,
 } from '$lib/images';
 
 export const load = async () => {
@@ -24,5 +25,6 @@ export const load = async () => {
 		SPEC_FINAL_6,
 		SPEC_FEEDBACK,
 		SPEC_PLUGIN_SCREENSHOT,
+		SPEC_FUTURE,
 	});
 };

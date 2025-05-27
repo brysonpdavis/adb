@@ -112,6 +112,7 @@ export const SPEC_PLUGIN_SCREENSHOT = new HashableImage(
 	453,
 	278,
 );
+export const SPEC_FUTURE = new HashableImage('spec-future.png', 'spec future', 581, 442);
 
 // INGAGE IMAGES
 export const INGAGE_PREVIEW = new HashableImage('ingage-preview.png', 'alt', 798, 518);

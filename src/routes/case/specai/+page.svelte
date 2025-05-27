@@ -20,6 +20,7 @@
 		SPEC_FINAL_6,
 		SPEC_FEEDBACK,
 		SPEC_PLUGIN_SCREENSHOT,
+		SPEC_FUTURE,
 	} = data;
 
 	const BRAND_COLOR = '#5E3CE4';
@@ -126,4 +127,12 @@
 		ctaText="check out spec.ai on figma"
 	/>
 	<Carousel images={[SPEC_FEEDBACK]} rowCount={1} title="What our users have to say" />
+	<CaseStudyProblemSection
+		brandColor={BRAND_COLOR}
+		title="Where do we see SpecAI in the future?"
+		description="We're excited about the future of SpecAI. While it's currently a Figma plugin, we're working toward expanding it into a web app to support a wider range of workflows. We also envision introducing AI agents that can act as specialized reviewers."
+		image={SPEC_FUTURE}
+		type="future"
+		imageSize="large"
+	/>
 </CaseStudy>
