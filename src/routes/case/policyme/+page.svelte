@@ -139,12 +139,12 @@
 		statement="Through user interviews and surveys, we learned that"
 		results={[resultOne, resultTwo, resultThree]}
 	/>
-	<!-- <Carousel
+	<Carousel
 		title="User interviews"
 		rowCount={2}
 		gap="med"
 		images={[POLICYME_INTERVIEW_1, POLICYME_INTERVIEW_2]}
-	/> -->
+	/>
 	<Carousel
 		title="Mobile screens"
 		rowCount={3}
