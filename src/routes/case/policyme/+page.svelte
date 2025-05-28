@@ -85,15 +85,15 @@
 {/snippet}
 
 {#snippet resultOne()}
-	<b>Price sensitivity</b> was important. Users wanted straightforward, competitive pricing
+	<b>Price sensitivity</b> was important - users wanted straightforward, competitive pricing
 {/snippet}
 
 {#snippet resultTwo()}
-	The ability to <b>easily add spouses or children</b> was a must-have when choosing a plan.
+	The ability to <b>easily add spouses or children</b> was a must-have when choosing a plan
 {/snippet}
 
 {#snippet resultThree()}
-	<b>High medical limits</b> — especially for dental procedures and paramedical services
+	Users want <b>higher coverage amounts</b> for things like dental work and physiotherapy
 {/snippet}
 
 {#snippet impactOne()}
@@ -105,7 +105,8 @@
 {/snippet}
 
 {#snippet impactThree()}
-	Consistent positive reviews and feedback on both the product and the experience{/snippet}
+	Consistent positive reviews and feedback on both the product and the experience
+{/snippet}
 
 <CaseStudy
 	title="POLICYME"
