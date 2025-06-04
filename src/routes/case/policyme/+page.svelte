@@ -119,7 +119,7 @@
 		team: [
 			{ label: 'Product Designer', count: 1 },
 			{ label: 'QA', count: 3 },
-			{ label: 'Product Manager', count: 1 },
+			{ label: 'Project Manager', count: 1 },
 			{ label: 'Engineer', count: 3 },
 		],
 		scope: [{ label: 'Product Research' }, { label: 'User Testing' }, { label: 'UX/UI Design' }],
