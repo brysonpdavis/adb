@@ -232,37 +232,37 @@ export const POLICYME_MOBILE_1 = new HashableImage(
 	'policyme-mobile-1.png',
 	'policyme mobile 1',
 	323,
-	647,
+	643,
 );
 export const POLICYME_MOBILE_2 = new HashableImage(
 	'policyme-mobile-2.png',
 	'policyme mobile 2',
 	323,
-	647,
+	643,
 );
 export const POLICYME_MOBILE_3 = new HashableImage(
 	'policyme-mobile-3.png',
 	'policyme mobile 3',
 	323,
-	647,
+	643,
 );
 export const POLICYME_DESKTOP_1 = new HashableImage(
 	'policyme-desktop-1.png',
 	'policyme desktop 1',
 	1048,
-	542,
+	1666,
+);
+export const POLICYME_LAPTOP_FRAME = new HashableImage(
+	'policyme-laptop-frame.png',
+	'laptop frame',
+	1048,
+	589,
 );
 export const POLICYME_DESKTOP_2 = new HashableImage(
 	'policyme-desktop-2.png',
 	'policyme desktop 2',
 	1048,
-	542,
-);
-export const POLICYME_DESKTOP_3 = new HashableImage(
-	'policyme-desktop-3.png',
-	'policyme desktop 3',
-	1048,
-	542,
+	589,
 );
 export const POLICYME_DESIGN_ELEMENTS = new HashableImage(
 	'policyme-design-elements.png',

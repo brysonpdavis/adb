@@ -5,6 +5,7 @@
 	import CaseStudyProblemSection from '$lib/components/case-study-problem-section.svelte';
 	import CaseStudy from '$lib/components/case-study.svelte';
 	import HashImage from '$lib/components/hash-image.svelte';
+	import LaptopScroll from '$lib/components/laptop-scroll.svelte';
 	import { POLICYME_URL } from '$lib/constants';
 	import type { PageProps } from './$types';
 
@@ -18,8 +19,8 @@
 		POLICYME_MOBILE_2,
 		POLICYME_MOBILE_3,
 		POLICYME_DESKTOP_1,
+		POLICYME_LAPTOP_FRAME,
 		POLICYME_DESKTOP_2,
-		POLICYME_DESKTOP_3,
 		POLICYME_DESIGN_ELEMENTS,
 		POLICYME_DESIGN_SYSTEM,
 		POLICYME_IMPACT,
@@ -152,12 +153,13 @@
 		gap="med"
 		images={[POLICYME_MOBILE_1, POLICYME_MOBILE_2, POLICYME_MOBILE_3]}
 	/>
-	<Carousel
-		title="Desktop screens"
-		rowCount={1}
-		gap="med"
-		images={[POLICYME_DESKTOP_1, POLICYME_DESKTOP_2, POLICYME_DESKTOP_3]}
-	/>
+	<div class="flex w-full flex-col gap-8">
+		<div class="text-center text-2xl font-medium">Desktop screens</div>
+		<div class="grid w-full grid-cols-1 gap-2 md:gap-6">
+			<LaptopScroll frame={POLICYME_LAPTOP_FRAME} screen={POLICYME_DESKTOP_1} />
+			<HashImage image={POLICYME_DESKTOP_2} className="w-full" />
+		</div>
+	</div>
 	{@render designSystemDescription()}
 	<HashImage image={POLICYME_DESIGN_ELEMENTS} className="w-full" />
 	<CaseStudyImpact
