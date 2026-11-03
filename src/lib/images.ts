@@ -202,7 +202,7 @@ export const POLICYME_PREVIEW = new HashableImage(
 	'policyme-preview.png',
 	'policyme preview',
 	578,
-	635,
+	711,
 );
 export const POLICYME_THUMBNAIL = new HashableImage(
 	'policyme-thumbnail.png',

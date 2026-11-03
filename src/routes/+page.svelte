@@ -1,5 +1,5 @@
 <script lang="ts">
-	import specLogo from '$lib/assets/spec-logo.svg';
+	import primeMatterLabsIcon from '$lib/assets/prime-matter-labs-icon.png';
 	import specWordmarkLogo from '$lib/assets/spec-wordmark-logo.svg';
 	import ingageWordmarkLogo from '$lib/assets/ingage-wordmark-logo.svg';
 	import policymeWordmarkLogo from '$lib/assets/policyme-wordmark-logo.svg';
@@ -7,7 +7,7 @@
 	import CaseStudySection from '$lib/components/case-study-section.svelte';
 	import FunButton from '$lib/components/fun-button.svelte';
 	import NameRound from '$lib/components/name-round.svelte';
-	import { INGAGE_URL, POLICYME_URL, SPEC_URL } from '$lib/constants';
+	import { INGAGE_URL, POLICYME_URL, PRIME_MATTER_LABS_URL, SPEC_URL } from '$lib/constants';
 	import { mountPageObserver } from '$lib/state/active-section.svelte';
 	import Nav from '$lib/components/nav.svelte';
 	import HashImage from '$lib/components/hash-image.svelte';
@@ -44,12 +44,13 @@
 		healthcare and insurance. Shaping everything from 0→1 products to redesigns and brand refreshes.
 	</div>
 	<div class="flex flex-row gap-2 text-lg">
-		Currently working on
+		Currently working at
 		<a
 			class="hover:text-primary flex flex-row items-center gap-2 underline transition duration-300"
-			href="http://www.specai.io"
+			href={PRIME_MATTER_LABS_URL}
 		>
-			spec.ai <img src={specLogo} alt="spec logo" class="h-6 w-6" />
+			Prime Matter Labs
+			<img src={primeMatterLabsIcon} alt="Prime Matter Labs logo" class="h-6 w-6" />
 		</a>
 	</div>
 	<div class="mt-2 flex w-full flex-col gap-8 lg:flex-row">

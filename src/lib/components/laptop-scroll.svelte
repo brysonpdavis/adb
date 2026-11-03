@@ -13,7 +13,7 @@
 	const {
 		frame,
 		screen,
-		screenRect = { left: 12.405, top: 4.072, width: 75.445, height: 79.751 },
+		screenRect = { left: 12.373, top: 4.131, width: 75.477, height: 79.796 },
 		durationSeconds = 18,
 	}: Props = $props();
 
